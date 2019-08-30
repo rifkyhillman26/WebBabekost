@@ -1,0 +1,16 @@
+{
+  "name": "webbabekost",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "materialize-css": "^1.0.0-rc.2",
+    "mysql": "^2.17.1"
+  }
+}
