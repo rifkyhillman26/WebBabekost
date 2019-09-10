@@ -9,7 +9,7 @@
         <div class="container">
           <div class="row">
             <div class="col l6 s12">
-              <img src="images/bitmap.png" style="height: 55px; width: 130px; margin-top: 50px;"/>
+              <img src="images/bitmap.png" style="height: 48px; width: 200px; margin-top: 50px;"/>
               <p class="grey-text text-lighten-4">Kita akan memberikan sesuai kebutuhan anda, tidak kurang dan tidak lebih</p>
             </div>
             <div class="col l4 offset-l2 s12">
@@ -28,7 +28,17 @@
         </div>
       </footer>
         <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="materialize/js/jquery.min.js"></script>
         <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+        <script>
+          $(document).ready(function(){
+            $('.parallax').parallax();
+            $('.dropdown-trigger').dropdown({
+              alignment: 'left'
+            });
+            $('.tabs').tabs();
+          });
+        </script>
      </body>
     </html>
     

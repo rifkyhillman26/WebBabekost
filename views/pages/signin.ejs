@@ -1,7 +1,6 @@
 <%- include('../partials/header.ejs') %>
 
 <style>
-* {box-sizing: border-box}
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -26,7 +25,7 @@ hr {
 
 /* Set a style for the submit/register button */
 .registerbtn {
-  background-color: #4CAF50;
+  background-color: #0288d1;
   color: white;
   font-weight: bold;
   padding: 16px 20px;
@@ -41,9 +40,9 @@ hr {
 }
 
 .body {
-  border: 3px solid #757575;
+  border: 3px solid  #0288d1;
   background-color: N/A;
-  width: 40%;
+  width: 35%;
   margin-left: 30%;
   border-radius: 15px;
   margin-top: 50px;
@@ -64,14 +63,11 @@ p {
 b {
   color: #424242;
 }
-
 /* Add a blue text color to links */
 a {
   color: dodgerblue;
 }
-
 /* Set a grey background color and center the text of the "sign in" section */
-
 h1 {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
@@ -82,7 +78,7 @@ h1 {
 <% if(err){ %>
   <h4><%= err %></h4>
 <% } %>
-
+<div class="semua">
 <form action="/proses-signin" class="body" method="POST">
     <div class="container">
       <h1>Sign in</h1>
@@ -105,5 +101,5 @@ h1 {
       <p>belum memiliki akun ?<a href="/register">Signup</a></p>
     </div>
   </form>
-
+  </div>
   <%- include('../partials/footer.ejs') %>

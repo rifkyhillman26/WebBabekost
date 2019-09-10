@@ -11,18 +11,24 @@
   </head>
   <body>
     <!-- Dropdown Structure -->
-  <nav class="teal lighten-2" style="height: 70px;">
+  <nav class="#424242 grey darken-3">
     <div class="nav-wrapper container">
-      <a href="/" class="brand-logo"><img src="images/bitmap.png" style="height: 50px; width: 110px; margin-top: 12px"/></a>
+      <a href="/" class="brand-logo"><img src="images/bitmap.png" style="height: 36px; width: 150px; margin-top: 10px"/></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="/home">Home</a></li>
+        <li><a href="/" style="color: white;">Home</a></li>
         <% if(locals.kunci) { %>
-        <li><a href="/"><%= locals.kunci.name %></a></li> 
-        <li><a href="/logout">Logout</a></li> 
+        <li><a href="/profile" class="dropdown-trigger btn" data-target="dropdown1" style="background-color: white;text-transform: capitalize; color: black; border-radius: 5px;"><%= locals.kunci.name %></a></li> 
         <% } else { %>
         <li><a href="/signin">Signin</a></li>
         <% } %>
-        <!-- Dropdown Trigger -->
+      </ul>
+        
+        <!-- ini untuk dropdown user -->
+        <ul id='dropdown1' class='dropdown-content'>
+          <li><a href="/profile" style="color: black;"><i class="material-icons">account_circle</i>profile</a></li>
+          <li><a href="/logout" style="color: black;"><i class="material-icons">keyboard_tab</i>logout</a></li>
+        </ul>
+        <!-- ini untuk dropdown user -->
       </ul>
     </div>
   </nav>

@@ -6,10 +6,6 @@ router.get('/', (req, res) => {
 })
 
 
-router.get('/home', (req, res) => {
-    res.render('pages/home.ejs')
-})
-
 router.get('/signin' , (req,res) => {
     if(res.locals.kunci) {
         res.redirect('/')
@@ -28,6 +24,7 @@ router.post('/proses-signin' , (req,res) => {
             } else{
                 if(rows.length > 0) {
                     req.session.kunci = {
+                        id: rows[0].id,
                         username: rows[0].username,
                         name: rows[0].name
                     }
@@ -78,6 +75,17 @@ router.get('/logout' , (req,res) => {
       }
 })
 
+router.get('/profile', (req, res) => {
+    if(res.locals.kunci) {
+        res.render('pages/profile.ejs', {err: false})
+    } else {
+        res.redirect('/')
+    }
+})
+
+router.get('/editprofile', (req, res) => {
+    res.render('pages/editprofile.ejs')
+})
 
 
 module.exports = router
