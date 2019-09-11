@@ -2,8 +2,6 @@
 
 <style>
 img {
-    margin-top: 15%;
-    margin-bottom: 10%;
     width: 210px;
     height: 210px;
 }
@@ -43,13 +41,25 @@ a {
 
 </style>
 
-<div class="col s12" style="display: flex; justify-content: center;align-items:center;">
-    <img class="center-align responsive-img circle" style="margin-right: 60px;" src="https://mamikos.com/general/img/pictures/default-user-image.png" />
+<div class="col s12 center" style="margin: 80px;margin-top: 15%;">
+  <img class="center-align responsive-img circle" src="https://mamikos.com/general/img/pictures/default-user-image.png" style="position: relative" />
+  <i class="material-icons" style="position: absolute;left: 639px;top: 245px;left: 638px;top: 356px;">add_a_photo</i>
 </div>
 <div class="container">
-    <form action="/action_page.php" method="get">
+    <form action="#" method="get">
         Nama <input type="text" name="Nama" placeholder="Masukan Nama" style="margin-bottom: 50px;"><br>
-        Tanggal Lahir <input type="text" name="ttl" placeholder="tgl/bln/yyyy" style="margin-bottom: 50px;"><br>
+        Jenis Kelamin
+        <p>
+        <label>
+            <input class="with-gap" name="group1" type="radio"  />
+            <span>Laki-Laki</span>
+        </label> 
+        <label style="margin-left: 30px;">
+            <input class="with-gap" name="group1" type="radio" />
+            <span>Perempuan</span>
+        </label>
+        </p> <br>
+        Tanggal Lahir <input type="text"  class="datepicker" placeholder="mm/dd/yyyy" style="margin-bottom: 50px;"><br>
         Kota asal <input list="Kota" name="Kota" placeholder="Masukan Kota"  style="margin-bottom: 50px;"><br>
     <datalist id="Kota">
         <option value="Jakarta">
@@ -75,8 +85,8 @@ a {
     </datalist>
     </form>
     <div class="button">
-            <button type="submit" class="Simpan"><a href="/">Simpan</a></button>
-            <button type="submit" class="Batal"><a href="/profile">Batal</a></button>
+            <a class="waves-effect waves-light btn green" href="">Simpan</a>
+            <a class="waves-effect waves-light btn red" href="/profile" style="margin-left: 50px;">Batal</a>
     </div>
 </div>
 <%- include('../partials/footer.ejs') %>

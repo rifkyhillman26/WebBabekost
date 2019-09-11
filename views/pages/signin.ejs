@@ -73,15 +73,20 @@ h1 {
   display: flex;
   justify-content: center;
 }
+
+a:hover {
+  color: red;
+}
 </style>
 
 <% if(err){ %>
   <h4><%= err %></h4>
 <% } %>
+
 <div class="semua">
 <form action="/proses-signin" class="body" method="POST">
     <div class="container">
-      <h1>Sign in</h1>
+      <h1>Masuk</h1>
       <p>Silakan isi formulir ini untuk masuk ke akun.</p>
       <hr>
   
@@ -93,12 +98,12 @@ h1 {
       <hr>
         
         <div class="button">
-          <button type="submit" class="registerbtn">Sign in</button>
+          <button type="submit" class="registerbtn">Masuk</button>
         </div>
      </div>
 
     <div class="container signin">
-      <p>belum memiliki akun ?<a href="/register">Signup</a></p>
+      <p>belum memiliki akun ?<a href="/register">Daftar</a></p>
     </div>
   </form>
   </div>

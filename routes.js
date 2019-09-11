@@ -45,7 +45,6 @@ router.get('/register' , (req,res) => {
 })
 
 router.post('/proses-register' , (req,res) => {
-
     if(req.body.password === req.body.Repeatpsw) {
         connection.query('INSERT INTO users (name, username, password) values (?,?,?)',
         [ req.body.name, req.body.username, req.body.password ] ,
@@ -84,10 +83,27 @@ router.get('/profile', (req, res) => {
 })
 
 router.get('/editprofile', (req, res) => {
-    res.render('pages/editprofile.ejs')
+    if(res.locals.kunci) {
+        res.render('pages/editprofile.ejs', {err: false})
+    } else {
+        res.redirect('/')
+    }
 })
 
 router.get('/Histori', (req, res) => {
-        res.render('pages/Histori.ejs')
+    if(res.locals.kunci) {
+        res.render('pages/Histori.ejs', {err: false})
+    } else {
+        res.redirect('/')
+    }
 })
+
+router.get('/Chat', (req, res) => {
+    if(res.locals.kunci) {
+        res.render('pages/Chat.ejs', {err: false})
+    } else {
+        res.redirect('/')
+    }
+})
+
 module.exports = router
