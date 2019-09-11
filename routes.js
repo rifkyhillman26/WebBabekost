@@ -87,5 +87,7 @@ router.get('/editprofile', (req, res) => {
     res.render('pages/editprofile.ejs')
 })
 
-
+router.get('/Histori', (req, res) => {
+        res.render('pages/Histori.ejs')
+})
 module.exports = router

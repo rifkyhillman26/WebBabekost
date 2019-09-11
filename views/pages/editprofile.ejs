@@ -7,15 +7,76 @@ img {
     width: 210px;
     height: 210px;
 }
+.button{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20%;
+    margin-top: 5%;
+}
+
+.Simpan {
+    width: 100px;
+    height: 50px;
+    margin-right: 50px;
+    background-color: green;
+}
+
+.Batal {
+    width: 100px;
+    height: 50px;
+    margin-right: 10%;
+    background-color: red;
+}
+
+a {
+    color: whitesmoke;
+}
+
+.Simpan:hover {
+    background-color: grey;
+}
+
+.Batal:hover {
+    background-color: grey;
+}
+
 </style>
 
 <div class="col s12" style="display: flex; justify-content: center;align-items:center;">
     <img class="center-align responsive-img circle" style="margin-right: 60px;" src="https://mamikos.com/general/img/pictures/default-user-image.png" />
 </div>
 <div class="container">
-    <p>
-        <label>Username:</label>
-        <input type="text" name="username" placeholder="username..." />
-    </p>
+    <form action="/action_page.php" method="get">
+        Nama <input type="text" name="Nama" placeholder="Masukan Nama" style="margin-bottom: 50px;"><br>
+        Tanggal Lahir <input type="text" name="ttl" placeholder="tgl/bln/yyyy" style="margin-bottom: 50px;"><br>
+        Kota asal <input list="Kota" name="Kota" placeholder="Masukan Kota"  style="margin-bottom: 50px;"><br>
+    <datalist id="Kota">
+        <option value="Jakarta">
+        <option value="Bandung">
+        <option value="Lampung">
+        <option value="Padang">
+        <option value="Medan">
+    </datalist>
+        Status <input list="Status" name="Status" placeholder="Masukan Status Anda"  style="margin-bottom: 50px;"><br>
+    <datalist id="Status">
+        <option value="Kawin">
+        <option value="Belum Kawin">
+    </datalist>
+        Pendidikan terakhir <input list="Pendidikan" name="Status" placeholder="Masukan Pendidikan Anda"  style="margin-bottom: 50px;"><br>
+    <datalist id="Pendidikan">
+        <option value="SD/MI">
+        <option value="SMP/MTS">
+        <option value="SMA/SMK">
+        <option value="diploma">
+        <option value="s1">
+        <option value="s2">
+        <option value="s3">
+    </datalist>
+    </form>
+    <div class="button">
+            <button type="submit" class="Simpan"><a href="/">Simpan</a></button>
+            <button type="submit" class="Batal"><a href="/profile">Batal</a></button>
+    </div>
 </div>
 <%- include('../partials/footer.ejs') %>

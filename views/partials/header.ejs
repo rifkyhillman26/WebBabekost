@@ -15,18 +15,21 @@
     <div class="nav-wrapper container">
       <a href="/" class="brand-logo"><img src="images/bitmap.png" style="height: 36px; width: 150px; margin-top: 10px"/></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="/" style="color: white;">Home</a></li>
         <% if(locals.kunci) { %>
+        <li><a href="/Histori" style="color: white;">Histori</a></li>
+        <li><a href="/" style="color: white;">Chat</a></li>
         <li><a href="/profile" class="dropdown-trigger btn" data-target="dropdown1" style="background-color: white;text-transform: capitalize; color: black; border-radius: 5px;"><%= locals.kunci.name %></a></li> 
         <% } else { %>
-        <li><a href="/signin">Signin</a></li>
+        <li><a href="">Cari Iklan</a></li>
+        <li><a href="">Promosikan Iklan Anda</a></li>
+        <li><a href="/signin">Masuk</a></li>
         <% } %>
       </ul>
         
         <!-- ini untuk dropdown user -->
         <ul id='dropdown1' class='dropdown-content'>
-          <li><a href="/profile" style="color: black;"><i class="material-icons">account_circle</i>profile</a></li>
-          <li><a href="/logout" style="color: black;"><i class="material-icons">keyboard_tab</i>logout</a></li>
+          <li><a href="/profile" style="color: black;"><i class="material-icons">account_circle</i>profil</a></li>
+          <li><a href="/logout" style="color: black;"><i class="material-icons">keyboard_tab</i>Keluar</a></li>
         </ul>
         <!-- ini untuk dropdown user -->
       </ul>
