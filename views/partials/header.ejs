@@ -13,12 +13,12 @@
     <!-- Dropdown Structure -->
   <nav class="#424242 grey darken-3">
     <div class="nav-wrapper container">
-      <a href="/" class="brand-logo"><img src="images/bitmap.png" style="height: 36px; width: 150px; margin-top: 10px"/></a>
+      <a href="/" class="brand-logo"><img src="images/bitmap.png" style="height: 30px; width: 135px;"/></a>
       <ul class="right hide-on-med-and-down">
         <% if(locals.kunci) { %>
         <li><a href="/Histori" style="color: white;">Histori</a></li>
         <li><a href="/Chat" style="color: white;">Chat</a></li>
-        <li><a href="/profile" class="dropdown-trigger btn" data-target="dropdown1" style="background-color: white;text-transform: capitalize; color: black; border-radius: 5px;"><%= locals.kunci.name %></a></li> 
+        <li><a class="dropdown-trigger" href="/profile" data-target="dropdown1" style="font-weight: bold;"><%= locals.kunci.name %><i class="material-icons right">arrow_drop_down</i></a></li>
         <% } else { %>
         <li><a href="">Cari Iklan</a></li>
         <li><a href="">Promosikan Iklan Anda</a></li>

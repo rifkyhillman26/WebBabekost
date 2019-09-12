@@ -1,77 +1,178 @@
 <%- include('../partials/header.ejs') %>
+<style>
+  .chip:hover {
+    background-color: yellow;
+  }
+</style>
 
 <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h4 class="header center white-text" style="font-weight: bold;margin-bottom: 8%;margin-top: 8%;">Mau Cari Kos Kosan ?</h4>
-        <div class="row center">
-          <h6 class="header col s12 white-text" style="font-weight: bold;">Dapatkan info kost murah, kost harian, kost bebas, dan info kosan lainnya di Babekos!</h6>
-        </div>
-        <div class="row center">
-          <a href="/" id="download-button" class="btn-large waves-effect waves-light grey darken-3 pulse">Mulai Cari</a>
-        </div>
-        <br><br>
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <h4 class="header center white-text" style="font-weight: bold;margin-bottom: 8%;margin-top: 8%;">Mau Cari Kos
+        Kosan ?</h4>
+      <div class="row center">
+        <h6 class="header col s12 white-text" style="font-weight: bold;">Dapatkan info kost murah, kost harian, kost
+          bebas, dan info kosan lainnya di Babekos!</h6>
+      </div>
+      <div class="row center">
+        <a href="/" id="download-button" class="btn-large waves-effect waves-light grey darken-3 pulse">Mulai Cari</a>
+      </div>
+      <br><br>
+    </div>
+  </div>
+  <div class="parallax"><img
+      src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80"
+      alt="Unsplashed background img 1"></div>
+</div>
+<div style="margin-left: 60px;margin-right: 60px;">
+  <div class="row">
+    <div class="col s6">
+      <div class="input-field col s12" style="margin-top: 10%;">
+        <h6 style="font-weight: bold;">Rekomendasi Kamar Kos untuk anda di</h6>
+        <select>
+          <option value="1">Lokasi Anda</option>
+          <option value="2">Jakarta</option>
+          <option value="3">Bandung</option>
+          <option value="4">Yogyakarta</option>
+          <option value="5">Surabaya</option>
+          <option value="6">Makassar</option>
+          <option value="7">Bandar Lampung</option>
+          <option value="8">Medan</option>
+          <option value="9">Padang</option>
+          <option value="10">Bali</option>
+          <option value="11">Kalimantan</option>
+        </select>
       </div>
     </div>
-    <div class="parallax"><img src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80" alt="Unsplashed background img 1"></div>
   </div>
-  <div class="container">
-  <div class="section">
-    <h5 style="margin-top: 8%;margin-bottom: 5%;">Promo</h5>
-  <div class="slider">
-      <ul class="slides">
-        <li>
-          <img src="https://images.unsplash.com/photo-1494203484021-3c454daf695d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"> <!-- random image -->
-          <div class="caption center-align">
-            <h3>Kost Baru Bangun/Baru Buka ?</h3>
-            <h5 class="light grey-text text-lighten-3">Mau Di Bantu Memenuhi Kamar Kosan Dengan Jaminan Pendapatan ?</h5>
-          </div>
-        </li>
-        <li>
-          <img src="https://images.unsplash.com/photo-1521783988139-89397d761dce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=625&q=80"> <!-- random image -->
-          <div class="caption left-align">
-            <h3>Ada Event Kampus Dan Tryout Partnership ?</h3>
-            <h5 class="light grey-text text-lighten-3">Yuk Kerjasama Sama Babekos.</h5>
-          </div>
-        </li>
-        <li>
-          <img src="https://images.unsplash.com/photo-1560635921-171138a3955e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"> <!-- random image -->
-          <div class="caption right-align">
-            <h3>Booking Kost Favoritmu !</h3>
-            <h5 class="light grey-text text-lighten-3">Sekarang Bisa Pesan Kost Dari Jauh-Jauh Hari Lewat Booking.</h5>
-          </div>
-        </li>
-        <li>
-          <img src="https://images.unsplash.com/photo-1432303492674-642e9d0944b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80"> <!-- random image -->
-          <div class="caption bottom-align">
-            <h3>Punya Barang Bekas Numpuk Di Kosan ?</h3>
-            <h5 class="light grey-text text-lighten-3">Ubah Jadi Duit aja !</h5>
-          </div>
-        </li>
-      </ul>
-    </div>
-      <div class="row">
-          <div class="col s6">
-              <div class="input-field col s12" style="margin-top: 20%;">
-                <h6 style="font-weight: bold;">Rekomendasi Kamar Kos untuk anda di</h6>
-                  <select>
-                    <option value="1">Lokasi Anda</option>
-                    <option value="2">Jakarta</option>
-                    <option value="3">Bandung</option>
-                    <option value="4">Yogyakarta</option>
-                    <option value="5">Surabaya</option>
-                    <option value="6">Makassar</option>
-                    <option value="7">Bandar Lampung</option>
-                    <option value="8">Medan</option>
-                    <option value="9">Padang</option>
-                    <option value="10">Bali</option>
-                    <option value="11">Kalimantan</option>
-                  </select>
-              </div>
+</div>
+</div>
+<div class="row">
+  <div class="col s12 m3" style="margin-left: 70px;">
+    <div class="card">
+      <div class="card-image">
+        <img
+          src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=739&q=80">
+        <span class="card-title">Jakarta</span>
+        <!-- <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a> -->
+      </div>
+      <div class="card-content">
+        <div style="display: flex;justify-content: flex-start;align-items: center;">
+          <p style="color: blueviolet;margin-right: 4px;">Campur</p>
+          <p style="color: green;">· Ada 4 Kamar</p>
         </div>
-      <!-- xxx -->
+        <div>
+          <p style="color: gray;">Rp 1.900.000 / bulan</p>
+        </div>
+        <div>
+          <p style="color: #9e9e9e ;">
+            Kost Family Puri Bimasakti Semarang
+          </p>
+        </div>
+        <div>
+          <i class="material-icons" style="color: yellow;">local_play</i>
+        </div>
+      </div>
     </div>
   </div>
+  <div class="col s6 m3" style="margin-left: 100px;">
+    <div class="card">
+      <div class="card-image">
+        <img
+          src="https://images.unsplash.com/photo-1538944495092-48fff71fbb0c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80">
+        <span class="card-title">Bandung</span>
+        <!-- <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a> -->
+      </div>
+      <div class="card-content">
+        <div style="display: flex;justify-content: flex-start;align-items: center;">
+          <p style="color: blueviolet;margin-right: 4px;">Campur</p>
+          <p style="color: red;">· Tinggal 1 Kamar</p>
+        </div>
+        <div>
+          <p style="color: gray;">Rp 2.200.000 / bulan</p>
+        </div>
+        <div>
+          <p style="color: #9e9e9e ;">
+            Kost Family Puri Bimasakti Semarang
+          </p>
+        </div>
+        <div>
+          <i class="material-icons" style="color: yellow;">local_play</i>
+        </div>
+      </div>
+    </div>
   </div>
+  <div class="col s6 m3" style="margin-left: 100px;">
+    <div class="card">
+      <div class="card-image">
+        <img
+          src="https://images.unsplash.com/photo-1539693010221-cd218dfe6565?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80">
+        <span class="card-title">Bandar Lampung</span>
+        <!-- <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a> -->
+      </div>
+      <div class="card-content">
+        <div style="display: flex;justify-content: flex-start;align-items: center;">
+          <p style="color: red;margin-right: 4px;">Putri</p>
+          <p style="color: green;">· Ada 5 Kamar</p>
+        </div>
+        <div>
+          <p style="color: gray;">Rp 2.000.000 / bulan</p>
+        </div>
+        <div>
+          <p style="color: #9e9e9e ;">
+            Kost Family Puri Bimasakti Semarang
+          </p>
+        </div>
+        <div>
+          <i class="material-icons" style="color: yellow;">local_play</i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="margin-top: 30px;">
+  <a href="/profile" style="color: grey;padding-left: 82%;position: relative;"><i class="material-icons"
+      style="position: absolute;top: -3px;left: 85%;">control_point</i>Lihat Lebih Banyak Lagi</a></li>
+</div>
+<div style="margin-left: 60px;margin-right: 60px;margin-top: 6%;">
+  <div style="display: flex;justify-content: center;align-items: center;margin-right: 70%;">
+    <h6 style="font-weight: bold;">Lokasi favorit kost di </h6>
+    <h6 style="margin-left: 10px;color: green;">#Jakarta Selatan</h6>
+  </div>
+  <div style="margin-top: 30px;margin-left: 20px;">
+    <div class="chip">
+      Kebayoran Lama
+    </div>
+    <div class="chip">
+      Kebayoran Baru
+    </div>
+    <div class="chip">
+      Cilandak
+    </div>
+    <div class="chip">
+      Mampang Prapatan 
+    </div>
+    <div class="chip">
+      Pancoran
+    </div>
+  </div>
+  <div style="margin-top: 10px;margin-left: 20px;">
+    <div class="chip">
+      Tebet
+    </div>
+    <div class="chip">
+      Setiabudi
+    </div>
+    <div class="chip">
+      Jagakarsa
+    </div>
+    <div class="chip">
+      Cipedak
+    </div>
+    <div class="chip">
+      Bintaro
+    </div>
+  </div>
+</div>
 <%- include('../partials/footer.ejs') %>
