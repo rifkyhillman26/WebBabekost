@@ -10,7 +10,12 @@
     <!-- Dropdown Structure -->
   <nav class="nav-wrapper #424242 grey darken-3" >
     <div class="container"> 
-      <a href="/" class="brand-logo"><img src="images/bitmap.png" style="height: 30px; width: 135px;"/></a>
+      <a href="/" class="brand-logo">
+        <img src="images/bitmap.png" style="height: 30px; width: 135px;"/>
+      </a>
+      <a class="sidenav-trigger" data-target="mobile-links">
+        <i class="material-icons">menu</i>
+      </a>
       <ul class="right hide-on-med-and-down">
         <% if(locals.kunci) { %>
         <li><a href="/Histori" style="color: white;">Histori</a></li>
@@ -21,6 +26,17 @@
         <li><a href="">Promosikan Iklan Anda</a></li>
         <li><a href="/signin">Masuk</a></li>
         <% } %>
+      </ul>
+      <ul class="sidenav" id="mobile-links">
+        <% if(locals.kunci) { %>
+          <li><a href="/Histori">Histori</a></li>
+          <li><a href="/Chat">Chat</a></li>
+          <li><a class="dropdown-trigger" href="/profile" data-target="dropdown2" style="font-weight: bold;"><%= locals.kunci.name %><i class="material-icons right">arrow_drop_down</i></a></li>
+          <% } else { %>
+          <li><a href="">Cari Iklan</a></li>
+          <li><a href="">Promosikan Iklan Anda</a></li>
+          <li><a href="/signin">Masuk</a></li>
+          <% } %>
       </ul>     
         <!-- ini untuk dropdown user -->
         <ul id='dropdown1' class='dropdown-content'>
@@ -28,5 +44,11 @@
           <li><a href="/logout" style="color: black;"><i class="material-icons">keyboard_tab</i>Keluar</a></li>
         </ul>
         <!-- ini untuk dropdown user -->
+          <!-- ini untuk dropdown user -->
+          <ul id='dropdown2' class='dropdown-content'>
+            <li><a href="/profile" style="color: black;"><i class="material-icons">account_circle</i>profil</a></li>
+            <li><a href="/logout" style="color: black;"><i class="material-icons">keyboard_tab</i>Keluar</a></li>
+          </ul>
+          <!-- ini untuk dropdown user -->
     </div>
   </nav>
