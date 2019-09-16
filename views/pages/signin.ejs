@@ -5,16 +5,18 @@
 /* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
+  padding: 12px;
+  margin: 10px 0 22px 0;
   display: inline-block;
   border: none;
-  background: #f1f1f1;
+  color: #f1f1f1;
 }
 
 input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
+  background-color: rgb(15, 15, 15, 0.4);
   outline: none;
+  padding-left: 10px;
+  border: 2px solid #0288d1;
 }
 
 /* Overwrite default styles of hr */
@@ -29,24 +31,32 @@ hr {
   color: white;
   font-weight: bold;
   padding: 16px 20px;
-  margin: 8px 0;
+  margin-top: 60px;
   width: 30%;
   font-size: 15px;
   height: 53px;
+  border: none;
 }
 
 .registerbtn:hover {
-  opacity:1;
+  background-color: gray;
 }
 
 .body {
-  border: 3px solid  #0288d1;
-  background-color: N/A;
-  width: 35%;
-  margin-left: 30%;
+  background-color: rgb(15, 15, 15, 0.5);
   border-radius: 15px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  width: 36%;
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+.all {
+  display: flex; 
+  justify-content: center;
+  align-items:center;
+  background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .button {
@@ -58,24 +68,29 @@ hr {
 p {
   display: flex;
   justify-content: center;
+  color: #f1f1f1;
 }
 
 b {
-  color: #424242;
+  color: #f1f1f1;
+  font-size: 17px;
 }
 /* Add a blue text color to links */
 a {
-  color: dodgerblue;
+  color: yellow;
 }
 /* Set a grey background color and center the text of the "sign in" section */
 h1 {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
+  color: #f1f1f1;
+  margin-bottom: 60px;
+  border-bottom: 2px solid #0288d1; 
 }
 
 a:hover {
-  color: red;
+  color: #0288d1;
 }
 </style>
 
@@ -83,28 +98,27 @@ a:hover {
   <h4><%= err %></h4>
 <% } %>
 
-<div class="semua">
+<div class="all col s12" >
 <form action="/proses-signin" class="body" method="POST">
     <div class="container">
-      <h1>Masuk</h1>
-      <p>Silakan isi formulir ini untuk masuk ke akun.</p>
-      <hr>
-  
-      <label for="email"><b>Username</b></label>
-      <input type="text" name='username' placeholder="Enter Username" />
-  
-      <label for="psw"><b>Password</b></label>
-      <input type="password" name="password" placeholder="Enter Password" />
-      <hr>
-        
-        <div class="button">
-          <button type="submit" class="registerbtn">Masuk</button>
-        </div>
+      <div>
+        <h1>Masuk</h1>
+      </div>
+      <div>
+        <label for="email"><b>Username</b></label>
+        <input type="text" name='username' placeholder="Enter Username" />
+      </div>
+      <div>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" name="password" placeholder="Enter Password" />
+      </div>
+      <div class="button">
+        <button type="submit" class="registerbtn">Masuk</button>
+      </div>
+      <div class="container signin">
+        <p>belum memiliki akun ?<a href="/register">Daftar</a></p>
+      </div>
      </div>
-
-    <div class="container signin">
-      <p>belum memiliki akun ?<a href="/register">Daftar</a></p>
-    </div>
   </form>
-  </div>
+</div>
   <%- include('../partials/footer.ejs') %>

@@ -1,0 +1,49 @@
+<%- include('../partials/header.ejs') %>
+<style>
+    .nama {
+        direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20%;
+    }
+
+    .tab:hover {
+        background-color: #e0e0e0;
+    }
+</style>
+
+<% if(err){ %>
+<h4><%= err %></h4>
+<% } %>
+
+<div class="row">
+    <div class="col s12">
+        <ul id="tabs-swipe-demo" class="tabs  z-depth-1" style="display: flex;justify-content: center;align-items: center;">
+            <li class="tab col s3">
+                <a class="waves-effect btn-grey" href="#test-swipe-1"
+                    style="display: flex;justify-content: center;align-items: center;color: black;text-transform: capitalize;"><i
+                        class="material-icons">done</i>dilihat</a>
+            </li>
+            <li class="tab col s3">
+                <a class="waves-effect btn-grey" href="#test-swipe-2"
+                    style="display: flex;justify-content: center;align-items: center;color: black;text-transform: capitalize;"><i
+                        class="material-icons">favorite</i>favorite</a>
+            </li>
+            <li class="tab col s3">
+                <a class="waves-effect btn-grey" href="#test-swipe-3"
+                    style=" display: flex;justify-content: center;align-items: center;color: black;text-transform: capitalize;"><i
+                        class="material-icons">question_answer</i>chat</a>
+            </li>
+        </ul>
+        <div id="test-swipe-1" class="col s12 center">
+            <p style="margin-bottom: 30%;margin-top: 30%;font-weight: bold;">Belum ad kost yang di lihat.</p>
+        </div>
+        <div id="test-swipe-2" class="col s12 center">
+            <p style="margin-bottom: 30%;margin-top: 30%;font-weight: bold;">Belum ada kost yang di favorit.</p>
+        </div>
+        <div id="test-swipe-3" class="col s12 center">
+            <p style="margin-bottom: 30%;margin-top: 30%;font-weight: bold;">Belum ada chat.</p>
+        </div>
+    </div>
+</div>
+<%- include('../partials/footer.ejs') %>

@@ -1,21 +1,22 @@
 <%- include('../partials/header.ejs') %>
 
 <style>
-* {box-sizing: border-box}
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
+  padding: 12px;
+  margin: 10px 0 22px 0;
   display: inline-block;
   border: none;
-  background: #f1f1f1;
+  color: #f1f1f1;
 }
 
 input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
+  background-color: rgb(15, 15, 15, 0.4);
   outline: none;
+  padding-left: 10px;
+  border: 2px solid #0288d1;
 }
 
 /* Overwrite default styles of hr */
@@ -26,88 +27,100 @@ hr {
 
 /* Set a style for the submit/register button */
 .registerbtn {
-  background-color: purple;
+  background-color: #0288d1;
   color: white;
   font-weight: bold;
   padding: 16px 20px;
-  margin: 8px 0;
+  margin-top: 60px;
   width: 30%;
   font-size: 15px;
   height: 53px;
+  border: none;
 }
 
 .registerbtn:hover {
-  opacity:1;
+  background-color: gray;
 }
 
 .body {
-  border: 3px solid  purple;
-  background-color: N/A;
-  width: 40%;
-  margin-left: 30%;
+  background-color: rgb(15, 15, 15, 0.5);
   border-radius: 15px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  width: 45%;
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+.all {
+  display: flex; 
+  justify-content: center;
+  align-items:center;
+  background-image: url('https://images.unsplash.com/photo-1512531123205-560f5974e686?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1332&q=80');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .button {
   display: flex;
   justify-content: center;
-  margin-bottom: 10%;
+  margin-bottom: 20px;
 }
 
 p {
   display: flex;
   justify-content: center;
+  color: #f1f1f1;
 }
 
 b {
-  color: #424242;
+  color: #f1f1f1;
+  font-size: 17px;
 }
-
 /* Add a blue text color to links */
 a {
-  color: dodgerblue;
+  color: yellow;
 }
-
 /* Set a grey background color and center the text of the "sign in" section */
-
 h1 {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
+  color: #f1f1f1;
+  margin-bottom: 60px;
+  border-bottom: 2px solid #0288d1; 
 }
+
 </style>
 
-<% if(err) { %>
-  <h3> <%= err %> </h3>
-<% }%>
+<% if(err){ %>
+  <h4><%= err %></h4>
+<% } %>
 
-<form action="/proses-register" class="body" method="post">
+<div class="all col s12" >
+<form action="/proses-register" class="body" method="POST">
     <div class="container">
-      <h1>Daftar</h1>
-      <p>Silakan isi formulir ini untuk membuat akun.</p>
-  
-      <hr>
-  
-      <label for="email"><b>Name</b></label>
-      <input type="text" name='name' placeholder="Enter Name" />
-
-      <label for="email"><b>Username</b></label>
-      <input type="text" name='username' placeholder="Enter Username" />
-  
-      <label for="psw"><b>Password</b></label>
-      <input type="password" name='password' placeholder="Enter Password" />
-  
-      <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" name='Repeatpsw' placeholder="Repeat Password" />
-  
-      <hr>
-        
-        <div class="button">
-          <button type="submit" class="registerbtn">Daftar</button>
-        </div>
+      <div>
+        <h1>Daftar</h1>
+      </div>
+      <div>
+        <label for="email"><b>Name</b></label>
+        <input type="text" name='name' placeholder="Enter Name" />    
+      </div>
+      <div>
+        <label for="email"><b>Username</b></label>
+        <input type="text" name='username' placeholder="Enter Username" />
+      </div>
+      <div>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" name="password" placeholder="Enter Password" />
+      </div>
+      <div>
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" name='Repeatpsw' placeholder="Repeat Password" />
+      </div>
+      <div class="button">
+        <button type="submit" class="registerbtn">Daftar</button>
+      </div>
      </div>
   </form>
-
+</div>
   <%- include('../partials/footer.ejs') %>
