@@ -11,6 +11,20 @@
   .Kos:hover {
     background-color: yellow;
   }
+
+  .button {
+    border: 2px solid yellow;
+    color: black;
+  }
+
+  .button:hover {
+    border: 2px solid blue;
+  }
+
+  b {
+    color: red;
+    font-size: 20px;
+  }
 </style>
 
 <div id="index-banner" class="parallax-container">
@@ -378,7 +392,7 @@
     </div>
   </div>
   <div style="direction: column;margin-top: 20%;margin-left: 32%;">
-    <img src="/images/suitcase.png" style="margin-left: 20%;" />
+    <img src="/images/briefcase.png" style="margin-left: 20%;" />
     <h3>Lowongan Kerja</h3>
   </div>
   <div style="display: flex;justify-content: center;align-items: center;">
@@ -408,7 +422,7 @@
       <li><a href="#!" style="color: black;">Lowongankerja Pontianak</a></li>
   </div>
   <div style="direction: column;margin-top: 15%;margin-left: 32%;">
-      <img src="/images/apartment.png" style="margin-left: 20%;" />
+      <img src="/images/condominium.png" style="margin-left: 20%;" />
       <h3>Apartemen Area</h3>
     </div>
     <div style="display: flex;justify-content: center;align-items: center;">
@@ -436,5 +450,43 @@
         <li><a href="#!" style="color: black;">Apartemen Gateway Pesanggrahan</a></li>
         <li><a href="#!" style="color: black;">Apartemen Taman Sari Semanggi</a></li>
     </div>
+    <div style="direction: column;margin-top: 15%;margin-left: 28%;">
+        <img src="/images/campus.png" style="margin-left: 24%;" />
+        <h3>Kost Sekitar Kampus</h3>
+      </div>
+      <div style="display: flex;justify-content: center;align-items: center;">
+        <h6>Temukan kos kosan di dekat kampus idamanmu</h6>
+      </div>
+      <div class="container col s12 row" style="margin-top: 50px;">
+        <a class='dropdown-trigger btn waves-effect waves-light btn white hoverable' href='#' data-target='dropdown9' style="color: black;width: 150px;height: 60px;padding: 10px 10px;" >Kampus favorit</a>
+        <ul id='dropdown9' class='dropdown-content'>
+          <li><a href="#!" style="color: black;">Kost dekat IPB Bogor</a></li>
+          <li><a href="#!" style="color: black;">Kost dekat UNDIP Semarang</a></li>
+          <li><a href="#!" style="color: black;">Kost dekat UNNES Semarang</a></li>
+          <li><a href="#!" style="color: black;">Kost dekat UMM Malang</a></li>
+        </ul>
+        <a class='dropdown-trigger btn waves-effect waves-light btn white hoverable' href='#' data-target='dropdown10' style="color: black;width: 150px;height: 60px;padding: 10px 10px;margin-left: 80px;" >Bandung</a>
+        <ul id='dropdown10' class='dropdown-content'>
+          <li><a href="#!" style="color: black;">Kost dekat ITB</a></li>
+          <li><a href="#!" style="color: black;">Kost dekat UPI</a></li>
+          <li><a href="#!" style="color: black;">Kost dekat UNISBA</a></li>
+          <li><a href="#!" style="color: black;">Kost dekat ITENAS</a></li>
+        </ul>
+        <a class='dropdown-trigger btn waves-effect waves-light btn white hoverable' href='#' data-target='dropdown11' style="color: black;width: 150px;height: 60px;padding: 10px 10px;margin-left: 80px;" >Jakarta</a>
+        <ul id='dropdown11' class='dropdown-content'>
+          <li><a href="#!" style="color: black;">Kost dekat Binus Kemanggisan</a></li>
+          <li><a href="#!" style="color: black;">Kost dekat STAN</a></li>
+          <li><a href="#!" style="color: black;">Kost dekat UPH</a></li>
+          <li><a href="#!" style="color: black;">Kost dekat UI Depok</a></li>
+      </div>
+</div>
+<div class="col s12" style="background-color: #f5f5f5">
+  <div class="col s12" style="direction: column;margin-top: 20%;margin-bottom: 20%;text-align: center;padding: 40px 40px;"> 
+    <h4>Apakah Anda pemilik kos kosan?</h4>
+    <p>Promosikan kost Anda di Mamikos agar lebih dikenal</p>
+    <div>
+      <a class="button waves-effect waves-light btn transparent" href="/editprofile"><b>GRATIS!</b> Promosikan Iklan Anda Disini</a>
+    </div>
+  </div>
 </div>
 <%- include('../partials/footer.ejs') %>
