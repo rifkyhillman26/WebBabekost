@@ -1,92 +1,94 @@
 <%- include('../partials/header.ejs') %>
 
 <style>
-img {
-    width: 210px;
-    height: 210px;
-}
-.button{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20%;
-    margin-top: 5%;
-}
+    img {
+        width: 210px;
+        height: 210px;
+    }
 
-.Simpan {
-    width: 100px;
-    height: 50px;
-    margin-right: 50px;
-    background-color: green;
-}
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20%;
+        margin-top: 5%;
+    }
 
-.Batal {
-    width: 100px;
-    height: 50px;
-    margin-right: 10%;
-    background-color: red;
-}
+    .Simpan {
+        width: 100px;
+        height: 50px;
+        margin-right: 50px;
+        background-color: green;
+    }
 
-a {
-    color: whitesmoke;
-}
+    .Batal {
+        width: 100px;
+        height: 50px;
+        margin-right: 10%;
+        background-color: red;
+    }
 
-.Simpan:hover {
-    background-color: grey;
-}
+    a {
+        color: whitesmoke;
+    }
 
-.Batal:hover {
-    background-color: grey;
-}
+    .Simpan:hover {
+        background-color: grey;
+    }
 
+    .Batal:hover {
+        background-color: grey;
+    }
 </style>
 
 <div class="col s12 center" style="margin: 80px;margin-top: 15%;">
-  <img class="center-align responsive-img circle" src="https://mamikos.com/general/img/pictures/default-user-image.png" style="position: relative" />
-  <i class="material-icons" style="position: absolute;left: 639px;top: 245px;left: 638px;top: 356px;">add_a_photo</i>
+    <img class="center-align responsive-img circle"
+        src="https://mamikos.com/general/img/pictures/default-user-image.png" style="position: relative" />
+    <i class="material-icons" style="position: absolute;left: 639px;top: 245px;left: 638px;top: 356px;">add_a_photo</i>
 </div>
 <div class="container">
     <form action="#" method="get">
         Nama <input type="text" name="Nama" placeholder="Masukan Nama" style="margin-bottom: 50px;"><br>
         Jenis Kelamin
         <p>
-        <label>
-            <input class="with-gap" name="group1" type="radio"  />
-            <span>Laki-Laki</span>
-        </label> 
-        <label style="margin-left: 30px;">
-            <input class="with-gap" name="group1" type="radio" />
-            <span>Perempuan</span>
-        </label>
+            <label>
+                <input class="with-gap" name="group1" type="radio" />
+                <span>Laki-Laki</span>
+            </label>
+            <label style="margin-left: 30px;">
+                <input class="with-gap" name="group1" type="radio" />
+                <span>Perempuan</span>
+            </label>
         </p> <br>
-        Tanggal Lahir <input type="text"  class="datepicker" placeholder="mm/dd/yyyy" style="margin-bottom: 50px;"><br>
-        Kota asal <input list="Kota" name="Kota" placeholder="Masukan Kota"  style="margin-bottom: 50px;"><br>
-    <datalist id="Kota">
-        <option value="Jakarta">
-        <option value="Bandung">
-        <option value="Lampung">
-        <option value="Padang">
-        <option value="Medan">
-    </datalist>
-        Status <input list="Status" name="Status" placeholder="Masukan Status Anda"  style="margin-bottom: 50px;"><br>
-    <datalist id="Status">
-        <option value="Kawin">
-        <option value="Belum Kawin">
-    </datalist>
-        Pendidikan terakhir <input list="Pendidikan" name="Status" placeholder="Masukan Pendidikan Anda"  style="margin-bottom: 50px;"><br>
-    <datalist id="Pendidikan">
-        <option value="SD/MI">
-        <option value="SMP/MTS">
-        <option value="SMA/SMK">
-        <option value="diploma">
-        <option value="s1">
-        <option value="s2">
-        <option value="s3">
-    </datalist>
+        Tanggal Lahir <input type="text" class="datepicker" placeholder="mm/dd/yyyy" style="margin-bottom: 50px;"><br>
+        Kota asal <input list="Kota" name="Kota" placeholder="Masukan Kota" style="margin-bottom: 50px;"><br>
+        <datalist id="Kota">
+            <option value="Jakarta">
+            <option value="Bandung">
+            <option value="Lampung">
+            <option value="Padang">
+            <option value="Medan">
+        </datalist>
+        Status <input list="Status" name="Status" placeholder="Masukan Status Anda" style="margin-bottom: 50px;"><br>
+        <datalist id="Status">
+            <option value="Kawin">
+            <option value="Belum Kawin">
+        </datalist>
+        Pendidikan terakhir <input list="Pendidikan" name="Status" placeholder="Masukan Pendidikan Anda"
+            style="margin-bottom: 50px;"><br>
+        <datalist id="Pendidikan">
+            <option value="SD/MI">
+            <option value="SMP/MTS">
+            <option value="SMA/SMK">
+            <option value="diploma">
+            <option value="s1">
+            <option value="s2">
+            <option value="s3">
+        </datalist>
     </form>
     <div class="button">
-            <a class="waves-effect waves-light btn green" href="">Simpan</a>
-            <a class="waves-effect waves-light btn red" href="/profile" style="margin-left: 50px;">Batal</a>
+        <a class="waves-effect waves-light btn green" href="">Simpan</a>
+        <a class="waves-effect waves-light btn red" href="/profile" style="margin-left: 50px;">Batal</a>
     </div>
 </div>
 <%- include('../partials/footer.ejs') %>

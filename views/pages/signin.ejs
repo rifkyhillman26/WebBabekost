@@ -1,105 +1,108 @@
 <%- include('../partials/header.ejs') %>
 
 <style>
+  /* Full-width input fields */
+  input[type=text],
+  input[type=password] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 22px 0;
+    display: inline-block;
+    border: none;
+    color: #f1f1f1;
+  }
 
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0 22px 0;
-  display: inline-block;
-  border: none;
-  color: #f1f1f1;
-}
+  input[type=text]:focus,
+  input[type=password]:focus {
+    background-color: rgb(15, 15, 15, 0.4);
+    outline: none;
+    padding-left: 10px;
+    border: 2px solid #0288d1;
+  }
 
-input[type=text]:focus, input[type=password]:focus {
-  background-color: rgb(15, 15, 15, 0.4);
-  outline: none;
-  padding-left: 10px;
-  border: 2px solid #0288d1;
-}
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
 
-/* Overwrite default styles of hr */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
+  /* Set a style for the submit/register button */
+  .registerbtn {
+    background-color: #0288d1;
+    color: white;
+    font-weight: bold;
+    padding: 16px 20px;
+    margin-top: 60px;
+    width: 30%;
+    font-size: 15px;
+    height: 53px;
+    border: none;
+  }
 
-/* Set a style for the submit/register button */
-.registerbtn {
-  background-color: #0288d1;
-  color: white;
-  font-weight: bold;
-  padding: 16px 20px;
-  margin-top: 60px;
-  width: 30%;
-  font-size: 15px;
-  height: 53px;
-  border: none;
-}
+  .registerbtn:hover {
+    background-color: gray;
+  }
 
-.registerbtn:hover {
-  background-color: gray;
-}
+  .body {
+    background-color: rgb(15, 15, 15, 0.5);
+    border-radius: 15px;
+    width: 36%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+  }
 
-.body {
-  background-color: rgb(15, 15, 15, 0.5);
-  border-radius: 15px;
-  width: 36%;
-  margin-top: 20%;
-  margin-bottom: 20%;
-}
+  .all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
 
-.all {
-  display: flex; 
-  justify-content: center;
-  align-items:center;
-  background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
+  .button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 
-.button {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
+  p {
+    display: flex;
+    justify-content: center;
+    color: #f1f1f1;
+  }
 
-p {
-  display: flex;
-  justify-content: center;
-  color: #f1f1f1;
-}
+  b {
+    color: #f1f1f1;
+    font-size: 17px;
+  }
 
-b {
-  color: #f1f1f1;
-  font-size: 17px;
-}
-/* Add a blue text color to links */
-a {
-  color: yellow;
-}
-/* Set a grey background color and center the text of the "sign in" section */
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  justify-content: center;
-  color: #f1f1f1;
-  margin-bottom: 60px;
-  border-bottom: 2px solid #0288d1; 
-}
+  /* Add a blue text color to links */
+  a {
+    color: yellow;
+  }
 
-a:hover {
-  color: #0288d1;
-}
+  /* Set a grey background color and center the text of the "sign in" section */
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    color: #f1f1f1;
+    margin-bottom: 60px;
+    border-bottom: 2px solid #0288d1;
+  }
+
+  a:hover {
+    color: #0288d1;
+  }
 </style>
 
 <% if(err){ %>
-  <h4><%= err %></h4>
+<h4><%= err %></h4>
 <% } %>
 
-<div class="all col s12" >
-<form action="/proses-signin" class="body" method="POST">
+<div class="all col s12">
+  <form action="/proses-signin" class="body" method="POST">
     <div class="container">
       <div>
         <h1>Masuk</h1>
@@ -118,7 +121,7 @@ a:hover {
       <div class="container signin">
         <p>belum memiliki akun ?<a href="/register">Daftar</a></p>
       </div>
-     </div>
+    </div>
   </form>
 </div>
-  <%- include('../partials/footer.ejs') %>
+<%- include('../partials/footer.ejs') %>

@@ -1,61 +1,79 @@
 <%- include('../partials/header.ejs') %>
 <style>
-.nama {
-    direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20%;
-}
+    .nama {
+        direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20%;
+    }
 
-.tab:hover {
-    background-color: #e0e0e0;
-}
-
+    .tab:hover {
+        background-color: #e0e0e0;
+    }
 </style>
 
 <% if(err){ %>
-    <h4><%= err %></h4>
-  <% } %>
-  
-<div class="col s12" style="display: flex; justify-content: center;align-items:center;background-image: url('https://images.unsplash.com/photo-1547264463-492e19b545ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1487&q=80');background-repeat: no-repeat;background-size: 100% 100%;">
-    <img class="center-align responsive-img circle" style="margin-right: 60px;margin-top: 15%;margin-left: 80px;margin-bottom: 15%;width: 210px;height: 210px;" src="https://mamikos.com/general/img/pictures/default-user-image.png" />
-<div class="nama">
-    <h4 style="font-weight: bold;">
-        <%= locals.kunci.name %>
-    </h4>
-<div>
-    <a class="waves-effect waves-light btn grey hoverable" href="/editprofile">Edit Profile</a>
-</div>
-</div>
+<h4><%= err %></h4>
+<% } %>
+
+<div class="col s12"
+    style="display: flex; justify-content: center;align-items:center;background-image: url('https://images.unsplash.com/photo-1547264463-492e19b545ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1487&q=80');background-repeat: no-repeat;background-size: 100% 100%;">
+    <img class="center-align responsive-img circle"
+        style="margin-right: 60px;margin-top: 15%;margin-left: 80px;margin-bottom: 15%;width: 210px;height: 210px;"
+        src="https://mamikos.com/general/img/pictures/default-user-image.png" />
+    <div class="nama">
+        <h4 style="font-weight: bold;">
+            <%= locals.kunci.name %>
+        </h4>
+        <div>
+            <a class="waves-effect waves-light btn grey hoverable" href="/editprofile">Edit Profile</a>
+        </div>
+    </div>
 </div>
 <div class="row">
- <div class="col s12">
-  <ul id="tabs-swipe-demo" class="tabs">
-    <li class="tab col s3"><a class="waves-effect btn-grey" href="#test-swipe-1"  style=" display: flex;justify-content: center;align-items: center;color: black;text-transform: capitalize;"><i class="material-icons">home</i>Kos saya</a></li>
-    <li class="tab col s3"><a class="waves-effect btn-grey" href="#test-swipe-2"  style=" display: flex;justify-content: center;align-items: center;color: black;text-transform: capitalize;"><i class="material-icons">library_add</i>Booking</a></li>
-    <li class="tab col s3"><a class="waves-effect btn-grey" href="#test-swipe-3"  style=" display: flex;justify-content: center;align-items: center;color: black;text-transform: capitalize;"><i class="material-icons">verified_user</i>Verifikasi Akun</a></li>
-    <li class="tab col s3"><a class="waves-effect btn-grey" href="#test-swipe-4"  style=" display: flex;justify-content: center;align-items: center;color: black;text-transform: capitalize;"><i class="material-icons">location_on</i>lokasi</a></li>
-  </ul>
-    <div id="test-swipe-1" class="col s12 center">
-        <img src="https://mamikos.com/general/img/icons/ic_cactus.svg" style="width: 210px;height: 210px;margin-top: 20%;">
-        <p style="margin-bottom: 30px;">Kamu belum booking kost nih, yuk mulai booking kosan yang kamu inginkan</p>
-        <a class="waves-effect waves-light btn grey hoverable" style="margin-bottom: 20%;" href="/editprofile">Cari Kost</a>
+    <div class="col s12">
+        <ul id="tabs-swipe-demo" class="tabs">
+            <li class="tab col s3"><a class="waves-effect btn-grey" href="#test-swipe-1"
+                    style=" display: flex;justify-content: center;align-items: center;color: black;text-transform: capitalize;"><i
+                        class="material-icons">home</i>Kos saya</a></li>
+            <li class="tab col s3"><a class="waves-effect btn-grey" href="#test-swipe-2"
+                    style=" display: flex;justify-content: center;align-items: center;color: black;text-transform: capitalize;"><i
+                        class="material-icons">library_add</i>Booking</a></li>
+            <li class="tab col s3"><a class="waves-effect btn-grey" href="#test-swipe-3"
+                    style=" display: flex;justify-content: center;align-items: center;color: black;text-transform: capitalize;"><i
+                        class="material-icons">verified_user</i>Verifikasi Akun</a></li>
+            <li class="tab col s3"><a class="waves-effect btn-grey" href="#test-swipe-4"
+                    style=" display: flex;justify-content: center;align-items: center;color: black;text-transform: capitalize;"><i
+                        class="material-icons">location_on</i>lokasi</a></li>
+        </ul>
+        <div id="test-swipe-1" class="col s12 center">
+            <img src="https://mamikos.com/general/img/icons/ic_cactus.svg"
+                style="width: 210px;height: 210px;margin-top: 20%;">
+            <p style="margin-bottom: 30px;">Kamu belum booking kost nih, yuk mulai booking kosan yang kamu inginkan</p>
+            <a class="waves-effect waves-light btn grey hoverable" style="margin-bottom: 20%;" href="/">Cari
+                Kost</a>
+        </div>
+        <div id="test-swipe-2" class="col s12 center">
+            <img src="https://mamikos.com/general/img/icons/ic_cactus.svg"
+                style="width: 210px;height: 210px;margin-top: 20%;">
+            <p style="margin-bottom: 30px;">Kamu belum booking kost nih, yuk mulai booking kosan yang kamu inginkan</p>
+            <a class="waves-effect waves-light btn grey hoverable" style="margin-bottom: 20%;" href="/">Cari
+                Kost</a>
+        </div>
+        <div id="test-swipe-3" class="col s12 center">
+            <img src="https://mamikos.com/general/img/icons/ic_cactus.svg"
+                style="width: 210px;height: 210px;margin-top: 20%;">
+            <p style="margin-bottom: 30px;">Kamu belum booking kost nih, yuk mulai booking kosan yang kamu inginkan</p>
+            <a class="waves-effect waves-light btn grey hoverable" style="margin-bottom: 20%;" href="/">Cari
+                Kost</a>
+        </div>
+        <div id="test-swipe-4" class="col s12 center">
+            <img src="https://mamikos.com/general/img/icons/ic_cactus.svg"
+                style="width: 210px;height: 210px;margin-top: 20%;">
+            <p style="margin-bottom: 30px;">Kamu belum booking kost nih, yuk mulai booking kosan yang kamu inginkan</p>
+            <a class="waves-effect waves-light btn grey hoverable" style="margin-bottom: 20%;" href="/">Cari
+                Kost</a>
+        </div>
     </div>
-    <div id="test-swipe-2" class="col s12 center">
-        <img src="https://mamikos.com/general/img/icons/ic_cactus.svg"  style="width: 210px;height: 210px;margin-top: 20%;">
-        <p style="margin-bottom: 30px;">Kamu belum booking kost nih, yuk mulai booking kosan yang kamu inginkan</p>
-        <a class="waves-effect waves-light btn grey hoverable" style="margin-bottom: 20%;" href="/editprofile">Cari Kost</a>
-    </div>
-    <div id="test-swipe-3" class="col s12 center">
-        <img src="https://mamikos.com/general/img/icons/ic_cactus.svg"  style="width: 210px;height: 210px;margin-top: 20%;">
-        <p style="margin-bottom: 30px;">Kamu belum booking kost nih, yuk mulai booking kosan yang kamu inginkan</p>
-        <a class="waves-effect waves-light btn grey hoverable" style="margin-bottom: 20%;" href="/editprofile">Cari Kost</a>
-    </div>
-    <div id="test-swipe-4" class="col s12 center">
-        <img src="https://mamikos.com/general/img/icons/ic_cactus.svg"  style="width: 210px;height: 210px;margin-top: 20%;">
-        <p style="margin-bottom: 30px;">Kamu belum booking kost nih, yuk mulai booking kosan yang kamu inginkan</p>
-        <a class="waves-effect waves-light btn grey hoverable" style="margin-bottom: 20%;" href="/editprofile">Cari Kost</a>
-    </div>
- </div>
 </div>
 <%- include('../partials/footer.ejs') %>
