@@ -106,4 +106,10 @@ router.get('/Chat', (req, res) => {
     }
 })
 
+
+router.get('/Promosi', (req, res) => {
+    res.render('pages/promosi.ejs')
+})
+
+
 module.exports = router
