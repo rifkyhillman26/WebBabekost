@@ -1,65 +1,133 @@
-<%- include('../partials/header.ejs') %>
-<style>
-  .chip:hover {
-    background-color: yellow;
-  }
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+  <style>
+      .chip:hover {
+        background-color: yellow;
+      }
+    
+      .chip {
+        cursor: pointer;
+      }
+    
+      .Kos:hover {
+        background-color: yellow;
+      }
+    
+      .button {
+        border: 2px solid yellow;
+        color: black;
+      }
+    
+      .button:hover {
+        border: 2px solid blue;
+      }
+    
+      b {
+        color: red;
+        font-size: 20px;
+      }
 
-  .chip {
-    cursor: pointer;
-  }
+      header {
+        background: url('https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80');
+        background-position: center;
+        background-size: cover;
+        height: 120%;
+      }
 
-  .Kos:hover {
-    background-color: yellow;
-  }
+      .isi {
+        margin-top: 7%;
+      }
 
-  .button {
-    border: 2px solid yellow;
-    color: black;
-  }
+      nav ul li:hover {
+        border-bottom: 2px solid yellow;
+      }
+    </style>
+</head>
 
-  .button:hover {
-    border: 2px solid blue;
-  }
-
-  b {
-    color: red;
-    font-size: 20px;
-  }
-</style>
-
-<div id="index-banner" class="parallax-container">
-  <div class="section no-pad-bot">
+<body>
+  <header>
+  <nav class="nav-wrapper transparent">
     <div class="container">
-      <br><br>
-      <h4 class="header center white-text" style="font-weight: bold;margin-bottom: 8%;margin-top: 8%;">Mau Cari Kos
-        Kosan ?</h4>
-      <div class="row center">
-        <h6 class="header col s12 white-text" style="font-weight: bold;">Dapatkan info kost murah, kost harian, kost
-          bebas, dan info kosan lainnya di Babekos!</h6>
-      </div>
-      <div class="row center">
-        <a href="#modal1" id="download-button"
-          class="btn-large waves-effect waves-light grey darken-3 pulse modal-trigger">Mulai Cari</a>
-      </div>
-      <div id="modal1" class="modal">
-        <div class="modal-content">
-          <div class="input-field col s6">
-            <i class="material-icons prefix">search</i>
-            <input id="icon_telephone" type="tel" class="validate">
-            <label for="icon_telephone">Telephone</label>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cari</a>
-        </div>
-      </div>
-      <br><br>
+      <a href="/" class="brand-logo" style="margin-top: 15px;">
+        <img src="images/bitmap.png" style="height: 30px; width: 135px;" />
+      </a>
+      <a class="sidenav-trigger" data-target="mobile-links" style="cursor: pointer;">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <% if(locals.kunci) { %>
+        <li><a href="/Histori" style="color: white;">Histori</a></li>
+        <li><a href="/Chat" style="color: white;">Chat</a></li>
+        <li><a class="dropdown-trigger" href="/profile" data-target="dropdown1"
+            style="font-weight: bold;"><%= locals.kunci.name %><i class="material-icons right">arrow_drop_down</i></a>
+        </li>
+        <% } else { %>
+        <li><a href="">Cari Iklan</a></li>
+        <li><a href="/Promosi">Promosikan Iklan Anda</a></li>
+        <li><a href="/signin">Masuk</a></li>
+        <% } %>
+      </ul>
+      <ul class="sidenav" id="mobile-links">
+        <% if(locals.kunci) { %>
+        <li><a href="/Histori">Histori</a></li>
+        <li><a href="/Chat">Chat</a></li>
+        <li><a class="dropdown-trigger" href="/profile" data-target="dropdown2"
+            style="font-weight: bold;"><%= locals.kunci.name %><i class="material-icons right">arrow_drop_down</i></a>
+        </li>
+        <% } else { %>
+        <li><a href="">Cari Iklan</a></li>
+        <li><a href="">Promosikan Iklan Anda</a></li>
+        <li><a href="/signin">Masuk</a></li>
+        <% } %>
+      </ul>
+      <!-- ini untuk dropdown user -->
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="/profile" style="color: black;"><i class="material-icons">account_circle</i>profil</a></li>
+        <li><a href="/logout" style="color: black;"><i class="material-icons">keyboard_tab</i>Keluar</a></li>
+      </ul>
+      <!-- ini untuk dropdown user -->
+      <!-- ini untuk dropdown user -->
+      <ul id='dropdown2' class='dropdown-content'>
+        <li><a href="/profile" style="color: black;"><i class="material-icons">account_circle</i>profil</a></li>
+        <li><a href="/logout" style="color: black;"><i class="material-icons">keyboard_tab</i>Keluar</a></li>
+      </ul>
+      <!-- ini untuk dropdown user -->
     </div>
-  </div>
-  <div class="parallax"><img
-      src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80"
-      alt="Unsplashed background img 1"></div>
-</div>
+  </nav>
+  <div id="index-banner" class="isi parallax-container">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <br><br>
+          <h4 class="header center white-text" style="font-weight: bold;margin-bottom: 8%;margin-top: 8%;">Mau Cari Kos
+            Kosan ?</h4>
+          <div class="row center">
+            <h6 class="header col s12 white-text" style="font-weight: bold;">Dapatkan info kost murah, kost harian, kost
+              bebas, dan info kosan lainnya di Babekos!</h6>
+          </div>
+          <div class="row center">
+            <a href="#modal1" id="download-button"
+              class="btn-large waves-effect waves-light grey darken-3 pulse modal-trigger">Mulai Cari</a>
+          </div>
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <div class="input-field col s6">
+                <i class="material-icons prefix">search</i>
+                <input id="icon_telephone" type="tel" class="validate">
+                <label for="icon_telephone">Telephone</label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cari</a>
+            </div>
+          </div>
+          <br><br>
+        </div>
+      </div>
+    </div>
+</header>
 <div style="margin-left: 60px;margin-right: 60px;">
   <div class="row">
     <div class="col s6">
