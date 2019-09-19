@@ -2,25 +2,25 @@ const router = require('express').Router()
 const connection = require('./setapp/mysqlconnet')
 
 router.get('/', (req, res) => {
-    res.render('pages/home.ejs')
+    res.render('pages/Home.ejs')
 })
 
 
-router.get('/signin' , (req,res) => {
+router.get('/Signin' , (req,res) => {
     if(res.locals.kunci) {
         res.redirect('/')
     } else {
-        res.render('pages/signin.ejs', {err : false})
+        res.render('pages/Signin.ejs', {err : false})
     }
 })
 
-router.post('/proses-signin' , (req,res) => {
+router.post('/proses-Signin' , (req,res) => {
     console.log(req.body)
     connection.query('SELECT * FROM users WHERE username= ? AND password= ?',
         [ req.body.username, req.body.password ] ,
         function (error, rows, field) {
             if(error) {
-                res.render('pages/signin.ejs', {err: 'lognin gagal'})
+                res.render('pages/Signin.ejs', {err: 'lognin gagal'})
             } else{
                 if(rows.length > 0) {
                     req.session.kunci = {
@@ -30,17 +30,17 @@ router.post('/proses-signin' , (req,res) => {
                     }
                     res.redirect('/')
                 } else{
-                    res.render('pages/signin.ejs', {err: 'password atau username salah'})
+                    res.render('pages/Signin.ejs', {err: 'password atau username salah'})
                 }
             }
         });
 })
 
-router.get('/register' , (req,res) => {
+router.get('/Register' , (req,res) => {
     if(res.locals.kunci) {
         res.redirect('/')
     } else {
-        res.render('pages/register.ejs', {err: false})
+        res.render('pages/Register.ejs', {err: false})
     }
 })
 
@@ -52,11 +52,11 @@ router.post('/proses-register' , (req,res) => {
             if(error) {
                 console.log(error)
             } else{
-                res.redirect('/signin')
+                res.redirect('/Signin')
             }
         });
     } else {
-        res.render('pages/register.ejs', { err: 'Password Tidak Sama'})
+        res.render('pages/Register.ejs', { err: 'Password Tidak Sama'})
     }
     
 })
@@ -74,17 +74,17 @@ router.get('/logout' , (req,res) => {
       }
 })
 
-router.get('/profile', (req, res) => {
+router.get('/Profile', (req, res) => {
     if(res.locals.kunci) {
-        res.render('pages/profile.ejs', {err: false})
+        res.render('pages/Profile.ejs', {err: false})
     } else {
         res.redirect('/')
     }
 })
 
-router.get('/editprofile', (req, res) => {
+router.get('/Editprofile', (req, res) => {
     if(res.locals.kunci) {
-        res.render('pages/editprofile.ejs', {err: false})
+        res.render('pages/Editprofile.ejs', {err: false})
     } else {
         res.redirect('/')
     }
@@ -108,7 +108,7 @@ router.get('/Chat', (req, res) => {
 
 
 router.get('/Promosi', (req, res) => {
-    res.render('pages/promosi.ejs')
+    res.render('pages/Promosi.ejs')
 })
 
 
