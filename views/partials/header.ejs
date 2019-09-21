@@ -20,13 +20,13 @@
       </a>
       <ul class="right hide-on-med-and-down">
         <% if(locals.kunci) { %>
-        <li><a href="/Histori" style="color: white;">Histori</a></li>
-        <li><a href="/Chat" style="color: white;">Chat</a></li>
+        <li><a href="/Bantuan" class="white-text">Pusat Bantuan</a></li>
+        <li><a href="/Histori" class="white-text">Histori</a></li>
         <li><a class="dropdown-trigger" href="/Profile" data-target="dropdown1"
             style="font-weight: bold;"><%= locals.kunci.name %><i class="material-icons right">arrow_drop_down</i></a>
         </li>
         <% } else { %>
-        <li><a href="">Cari Iklan</a></li>
+        <li><a href="/Bantuan">Pusat Bantuan</a></li>
         <li><a href="/Promosi">Promosikan Iklan Anda</a></li>
         <li><a href="/signin">Masuk</a></li>
         <% } %>
@@ -34,15 +34,16 @@
       <ul class="sidenav" id="mobile-links">
         <% if(locals.kunci) { %>
         <li><a href="/">Home</a></li>
-        <li><a href="/Histori">Histori</a></li>
-        <li><a href="/Chat">Chat</a></li>
+        <li><a href="/Histori"> Histori </a></li>
+        <li><a href="/Bantuan"> Pusat Bantuan </a></li>
         <li><a class="dropdown-trigger" href="/Profile" data-target="dropdown2"
             style="font-weight: bold;"><%= locals.kunci.name %><i class="material-icons right">arrow_drop_down</i></a>
         </li>
         <% } else { %>
-        <li><a href="">Cari Iklan</a></li>
-        <li><a href="/Promosi">Promosikan Iklan Anda</a></li>
-        <li><a href="/signin">Masuk</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/Bantuan"> Pusat Bantuan </a></li>
+        <li><a href="/Promosi"> Promosikan Iklan Anda </a></li>
+        <li><a href="/signin"> Masuk </a></li>
         <% } %>
       </ul>
       <!-- ini untuk dropdown user -->

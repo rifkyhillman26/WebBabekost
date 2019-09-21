@@ -112,4 +112,9 @@ router.get('/Promosi', (req, res) => {
 })
 
 
+router.get('/Bantuan', (req, res) => {
+    res.render('pages/Bantuan.ejs')
+})
+
+
 module.exports = router

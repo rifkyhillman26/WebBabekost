@@ -1,0 +1,275 @@
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+</head>
+
+<style>
+    nav ul li:hover {
+        border-left: 3px solid #42a5f5;
+    }
+</style>
+
+<body>
+    <!-- Dropdown Structure -->
+    <nav class="white">
+        <div class="container">
+            <a href="/" class="brand-logo">
+                <img src="images/bitmap.png" style="height: 30px; width: 135px;margin-top: 12px;" />
+            </a>
+            <a class="sidenav-trigger" data-target="mobile-links" style="cursor: pointer;">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <% if(locals.kunci) { %>
+                <li><a href="/Bantuan" class="black-text">Pusat Bantuan</a></li>
+                <li><a href="/Histori" class="black-text">Histori</a></li>
+                <li><a class="dropdown-trigger black-text" href="/Profile" data-target="dropdown1"
+                        style="font-weight: bold;"><%= locals.kunci.name %><i
+                            class="material-icons right">arrow_drop_down</i></a>
+                </li>
+                <% } else { %>
+                <li><a href="/Bantuan">Pusat Bantuan</a></li>
+                <li><a href="/Promosi">Promosikan Iklan Anda</a></li>
+                <li><a href="/signin">Masuk</a></li>
+                <% } %>
+            </ul>
+            <ul class="sidenav" id="mobile-links">
+                <% if(locals.kunci) { %>
+                <li><a href="/">Home</a></li>
+                <li><a href="/Histori"> Histori </a></li>
+                <li><a href="/Bantuan"> Pusat Bantuan </a></li>
+                <li><a class="dropdown-trigger" href="/Profile" data-target="dropdown2"
+                        style="font-weight: bold;"><%= locals.kunci.name %><i
+                            class="material-icons right">arrow_drop_down</i></a>
+                </li>
+                <% } else { %>
+                <li><a href="/">Home</a></li>
+                <li><a href="/Bantuan"> Pusat Bantuan </a></li>
+                <li><a href="/Promosi"> Promosikan Iklan Anda </a></li>
+                <li><a href="/signin"> Masuk </a></li>
+                <% } %>
+            </ul>
+            <!-- ini untuk dropdown user -->
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="/Profile" style="color: black;"><i class="material-icons">account_circle</i>profil</a></li>
+                <li><a href="/logout" style="color: black;"><i class="material-icons">keyboard_tab</i>Keluar</a></li>
+            </ul>
+            <!-- ini untuk dropdown user -->
+            <!-- ini untuk dropdown user -->
+            <ul id='dropdown2' class='dropdown-content'>
+                <li><a href="/Profile" style="color: black;"><i class="material-icons">account_circle</i>profil</a></li>
+                <li><a href="/logout" style="color: black;"><i class="material-icons">keyboard_tab</i>Keluar</a></li>
+            </ul>
+            <!-- ini untuk dropdown user -->
+        </div>
+    </nav>
+
+    <div class="col s12 #424242 grey darken-3">
+        <div class="col s12" style="text-align: center;padding: 20px 20px;">
+            <h3 style="color: white;font-family: serif;">Pusat Bantuan</h3>
+        </div>
+    </div>
+    <div class="col s12">
+        <ul id="tabs-swipe-demo" class="tabs  z-depth-1 black-text" style="padding-left: 10%;">
+            <li class="tab col s3">
+                <a class="waves-effect btn-grey black-text" href="#test-swipe-1">Bantuan tenant</a>
+            </li>
+            <li class="tab col s3">
+                <a class="waves-effect btn-grey black-text" href="#test-swipe-2">Bantuan owner</a>
+            </li>
+        </ul>
+        <div id="test-swipe-1" class="container col s12 center" style="margin-bottom: 30%;margin-top: 10%;">
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header #424242 grey darken-3 white-text">
+                        <i class="material-icons">arrow_drop_down</i>Bagaimana jika saya terlambat melakukan pembayaran?
+                    </div>
+                    <div class="collapsible-body">
+                        <span>
+                            Apabila pemilik kost menerapkan sistem denda,
+                            maka Anda akan dikenakan denda yang wajib dibayar
+                            sebagai kompensasi atas keterlambatan pembayaran.
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header #424242 grey darken-3 white-text">
+                        <i class="material-icons">arrow_drop_down</i>Apa itu “Kontrak Kost”?
+                    </div>
+                    <div class="collapsible-body">
+                        <span>
+                            “Kontrak Kost” adalah salah satu fitur dari “Kos Saya”.
+                            Pada menu ini, Anda dapat melihat seluruh kontrak yang
+                            telah Anda dan Pemilik Kost setujui saat melakukan Booking.
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header #424242 grey darken-3 white-text">
+                        <i class="material-icons">arrow_drop_down</i>Apa itu “Tagihan Kost”?
+                    </div>
+                    <div class="collapsible-body">
+                        <span>
+                            “Tagihan Kost” adalah salah satu fitur dari “Kost Saya”.
+                            Pada menu ini, Anda dapat melihat seluruh riwayat tagihan pembayaran kost
+                            dan membayar tagihan berikutnya.
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header #424242 grey darken-3 white-text">
+                        <i class="material-icons">arrow_drop_down</i>Apa itu “Kost Saya”?
+                    </div>
+                    <div class="collapsible-body">
+                        <span>
+                            “Kost Saya” adalah halaman khusus untuk
+                            mengetahui informasi mengenai kontrak kost yang sedang Anda huni.
+                            Fitur ini hanya dapat anda gunakan setelah berhasil melakukan <b>Booking</b>,
+                            Anda dapat melihat kontrak yang berlaku dan membayar tagihan pembayaran kost berikutnya.
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header #424242 grey darken-3 white-text">
+                        <i class="material-icons">arrow_drop_down</i>Apakah saya wajib survey kost ketika mengajukan
+                        booking?
+                    </div>
+                    <div class="collapsible-body">
+                        <span>
+                            Tidak wajib. Silakan sesuai dengan kebutuhan Anda masing-masing.
+                            Perlu diketahui, Bisa Booking Kost tak hanya menyajikan foto-foto kamar
+                            atau fasilitas kost, tetapi juga foto 360 dari kamar kost, video tour,
+                            dan Virtual Reality tour sehingga calon penghuni kost bisa melihat langsung
+                            kost tanpa perlu repot datang ke tempat.
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header #424242 grey darken-3 white-text">
+                        <i class="material-icons">arrow_drop_down</i>Apa yang harus saya lakukan setelah menempati kost
+                        yang saya booking?
+                    </div>
+                    <div class="collapsible-body">
+                        <span>
+                            Segera berikan review terhadap Bisa Booking Kost yang Anda
+                            tempati lewat aplikasi atau website Babekost.
+                            Anda juga dapat melihat kontrak dan tagihan kost Anda pada menu “Kost Saya”
+                            pada halaman profil.
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header #424242 grey darken-3 white-text">
+                        <i class="material-icons">arrow_drop_down</i>Apa yang harus saya lakukan setelah booking diterima?
+                    </div>
+                    <div class="collapsible-body">
+                        <span>
+                            Setelah <b>Booking</b> yang Anda lakukan diterima pemilik kost, 
+                            Anda punya waktu 1 x 24 jam untuk melakukan pembayaran kost sesuai tagihan.
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header #424242 grey darken-3 white-text">
+                        <i class="material-icons">arrow_drop_down</i>Apa yang harus saya lakukan setelah mengajukan booking?
+                    </div>
+                    <div class="collapsible-body">
+                        <span>
+                            Anda perlu menunggu konfirmasi dari pemilik <b>Bisa Booking Kost</b>. 
+                            Booking yang Anda ajukan bisa diterima ataupun ditolak oleh pemilik kost. 
+                            Jika diterima, silakan melanjutkan ke tahap pembayaran.
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header #424242 grey darken-3 white-text">
+                        <i class="material-icons">arrow_drop_down</i>Apakah saya bisa mempercayai fasilitas Bisa Booking Kost?
+                    </div>
+                    <div class="collapsible-body">
+                        <span>
+                            Tentu saja. <b>Bisa Booking Kost</b> telah melalui serangkaian pengecekan 
+                            langsung oleh tim Mamikos. Data dan foto yang tersaji 
+                            pada halaman detail dijamin merupakan data yang benar dan 
+                            kondisi kamar kost yang ditampilkan pada iklan dijamin sesuai dengan 
+                            kenyataan.Sebagian kost yang terdaftar <b>Bisa Booking Kost</b>  
+                            memiliki foto 360 dari kamar kost, video tour, dan Virtual 
+                            Reality tour sehingga calon penghuni kost bisa melihat langsung kost 
+                            tanpa perlu repot datang ke tempat.                                
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header #424242 grey darken-3 white-text">
+                        <i class="material-icons">arrow_drop_down</i>Bagaimana cara booking kost?
+                    </div>
+                    <div class="collapsible-body">
+                        <span>
+                            Saat ini, kost yang bisa di-booking adalah kost yang memiliki tanda 
+                            “Bisa Booking”. Untuk melakukan booking kost, silakan klik tombol 
+                            “Booking” yang terletak di bagian kanan bawah halaman detail kost.
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header #424242 grey darken-3 white-text">
+                        <i class="material-icons">arrow_drop_down</i>Apa yang harus saya lakukan setelah menempati kost
+                        yang saya booking?
+                    </div>
+                    <div class="collapsible-body">
+                        <span>
+                            Segera berikan review terhadap Bisa Booking Kost yang Anda
+                            tempati lewat aplikasi atau website Babekost.
+                            Anda juga dapat melihat kontrak dan tagihan kost Anda pada menu “Kost Saya”
+                            pada halaman profil.
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header #424242 grey darken-3 white-text">
+                        <i class="material-icons">arrow_drop_down</i>Apa itu virtual tour?
+                    </div>
+                    <div class="collapsible-body">
+                        <span>
+                            Virtual tour adalah sebuah simulasi yang menampilkan kost 
+                            dalam bentuk video atau susunan foto sesuai dengan kenyataan aslinya.
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header #424242 grey darken-3 white-text">
+                        <i class="material-icons">arrow_drop_down</i>Apa itu Babechecker?
+                    </div>
+                    <div class="collapsible-body">
+                        <span>
+                            Babe-Checker adalah tim Babekost yang bertugas mengecek dan 
+                            memastikan langsung kondisi asli kost sesuai dengan data yang diberikan. 
+                            Lewat video dari Babe-Checker, calon penghuni kost bisa melihat 
+                            langsung kondisi asli kost yang akan disewa.
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="test-swipe-2" class="container col s12 center" style="margin-bottom: 30%;margin-top: 10%;">
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header #424242 grey darken-3 white-text"><i
+                            class="material-icons">arrow_drop_down</i>First</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header #424242 grey darken-3 white-text"><i
+                            class="material-icons">arrow_drop_down</i>Second</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header #424242 grey darken-3 white-text"><i
+                            class="material-icons">arrow_drop_down</i>Third</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <%- include('../partials/footer.ejs') %>
