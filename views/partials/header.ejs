@@ -6,6 +6,9 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="views/css/home.css" />
+  <link type="text/css" rel="stylesheet" href="/views/css/sigin.css" />
+  <link type="text/css" rel="stylesheet" href="/views/css/register.css" />
 </head>
 
 <body>
@@ -20,31 +23,33 @@
       </a>
       <ul class="right hide-on-med-and-down">
         <% if(locals.kunci) { %>
-        <li><a href="/Bantuan" class="white-text">Pusat Bantuan</a></li>
-        <li><a href="/Histori" class="white-text">Histori</a></li>
-        <li><a class="dropdown-trigger" href="/Profile" data-target="dropdown1"
-            style="font-weight: bold;"><%= locals.kunci.name %><i class="material-icons right">arrow_drop_down</i></a>
-        </li>
-        <% } else { %>
-        <li><a href="/Bantuan">Pusat Bantuan</a></li>
-        <li><a href="/Promosi">Promosikan Iklan Anda</a></li>
-        <li><a href="/signin">Masuk</a></li>
-        <% } %>
+          <li><a href="/Bantuan" class="white-text">Pusat Bantuan</a></li>
+          <li><a href="/Histori" class="white-text">Histori</a></li>
+          <li><a class="dropdown-trigger" href="/Profile" data-target="dropdown1" style="font-weight: bold;">
+              <%= locals.kunci.name %><i class="material-icons right">arrow_drop_down</i>
+            </a>
+          </li>
+          <% } else { %>
+            <li><a href="/Bantuan">Pusat Bantuan</a></li>
+            <li><a href="/Promosi">Promosikan Iklan Anda</a></li>
+            <li><a href="/signin">Masuk</a></li>
+            <% } %>
       </ul>
       <ul class="sidenav" id="mobile-links">
         <% if(locals.kunci) { %>
-        <li><a href="/">Home</a></li>
-        <li><a href="/Histori"> Histori </a></li>
-        <li><a href="/Bantuan"> Pusat Bantuan </a></li>
-        <li><a class="dropdown-trigger" href="/Profile" data-target="dropdown2"
-            style="font-weight: bold;"><%= locals.kunci.name %><i class="material-icons right">arrow_drop_down</i></a>
-        </li>
-        <% } else { %>
-        <li><a href="/">Home</a></li>
-        <li><a href="/Bantuan"> Pusat Bantuan </a></li>
-        <li><a href="/Promosi"> Promosikan Iklan Anda </a></li>
-        <li><a href="/signin"> Masuk </a></li>
-        <% } %>
+          <li><a href="/">Home</a></li>
+          <li><a href="/Histori"> Histori </a></li>
+          <li><a href="/Bantuan"> Pusat Bantuan </a></li>
+          <li><a class="dropdown-trigger" href="/Profile" data-target="dropdown2" style="font-weight: bold;">
+              <%= locals.kunci.name %><i class="material-icons right">arrow_drop_down</i>
+            </a>
+          </li>
+          <% } else { %>
+            <li><a href="/">Home</a></li>
+            <li><a href="/Bantuan"> Pusat Bantuan </a></li>
+            <li><a href="/Promosi"> Promosikan Iklan Anda </a></li>
+            <li><a href="/signin"> Masuk </a></li>
+            <% } %>
       </ul>
       <!-- ini untuk dropdown user -->
       <ul id='dropdown1' class='dropdown-content'>

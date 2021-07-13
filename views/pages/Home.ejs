@@ -3,48 +3,6 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
-  <style>
-    .chip:hover {
-      background-color: #1e88e5;
-    }
-
-    .chip {
-      cursor: pointer;
-    }
-
-    .Kos:hover {
-      background-color: #1e88e5;
-    }
-
-    .button {
-      border: 2px solid red;
-      color: black;
-    }
-
-    .button:hover {
-      border: 2px solid #1e88e5;
-    }
-
-    b {
-      color: red;
-      font-size: 20px;
-    }
-
-    header {
-      background: url('https://images.unsplash.com/photo-1553172574-1eb37430181e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
-      background-position: center;
-      background-size: cover;
-      height: 100%;
-    }
-
-    .isi {
-      margin-top: 7%;
-    }
-
-    nav ul li:hover {
-      border-bottom: 3px solid #1e88e5;
-    }
-  </style>
 </head>
 
 <body>
@@ -135,30 +93,33 @@
     <div id="index-banner" class="isi parallax-container">
       <div class="section no-pad-bot">
         <div class="container">
-          <br><br>
-          <h4 class="header center white-text" style="font-weight: bold;margin-bottom: 8%;">Mau Cari Kos
-            Kosan ?</h4>
-          <div class="row center">
-            <h6 class="header col s12 white-text" style="font-weight: bold;">Dapatkan info kost murah, kost harian, kost
-              bebas, dan info kosan lainnya di Babekos!</h6>
-          </div>
-          <div class="row center">
-            <a href="#modal1" id="download-button"
-              class="btn-large waves-effect waves-light #1e88e5 blue darken-1 pulse modal-trigger">Mulai Cari</a>
-          </div>
-          <div id="modal1" class="modal">
-            <div class="modal-content">
-              <div class="input-field col s6">
-                <i class="material-icons prefix">search</i>
-                <input id="icon_telephone" type="tel" class="validate">
-                <label for="icon_telephone">Search</label>
+          <div class="header-home">
+            <br><br>
+            <h4 class="header center white-text" style="font-weight: bold;margin-bottom: 8%;">Mau Cari Kos
+              Kosan ?</h4>
+            <div class="row center">
+              <h6 class="header col s12 white-text" style="font-weight: bold;">Dapatkan info kost murah, kost harian,
+                kost
+                bebas, dan info kosan lainnya di Babekos!</h6>
+            </div>
+            <div class="row center">
+              <a href="#modal1" id="download-button"
+                class="btn-large waves-effect waves-light #1e88e5 blue darken-1 pulse modal-trigger">Mulai Cari</a>
+            </div>
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">search</i>
+                  <input id="icon_telephone" type="tel" class="validate">
+                  <label for="icon_telephone">Search</label>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cari</a>
               </div>
             </div>
-            <div class="modal-footer">
-              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cari</a>
-            </div>
+            <br><br>
           </div>
-          <br><br>
         </div>
       </div>
     </div>
@@ -619,23 +580,6 @@
   <div class="col s12" style="background-color: #f5f5f5">
     <div class="col s12" style="direction: column;margin-top: 50px;padding: 40px 40px;">
       <h6>Babekos - Aplikasi Pencari Info Kost No 1 Di Indonesia</h6>
-      <p>BABEKOS menyajikan informasi Kamar kosan,
-        lengkap dengan fasilitas kost, harga kost,
-        dan dekorasi kamar beserta foto desain kamar yang disesuaikan dengan kondisi sebenarnya.
-        Setiap Rumah Kost yang ada di BABEKOS benar-benar kami datangi, kami verifikasi,
-        kami seleksi dan kami ambil data langsung, termasuk kost yang didaftarkan oleh pemilik atau umum.
-        Informasi ketersediaan kamar kost dan harga kost kami update max setiap 2 minggu sekali untuk memastikan info
-        kost
-        kami akurat dan bermanfaat untuk anak kost.
-        Saat ini kami memiliki lebih dari 10.000+ info kost dan masih terus bertambah di Indonesia.
-        Data Kamar kosan yang kami miliki telah mencakup kost di depok, kost jakarta, kost Jogja, hingga Kost Bandung
-        dan
-        Kost di Surabaya.
-        Pengembangan data kosan masih terus kami usahakan. Namun demikian, kamu dapat request penambahan info kosan di
-        seputar area yang kamu inginkan dengan mengisi data di Form Komplain.
-        Kamu juga dapat menambahkan masukan, saran dan kritikan untuk mamikos di form tersebut. Dukungan kamu,
-        akan mempercepat pengembangan data kosan yang kami miliki.
-      </p>
     </div>
   </div>
   <%- include('../partials/footer.ejs') %>
